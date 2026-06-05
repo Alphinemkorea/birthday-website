@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Princess 💖</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            overflow-x: hidden;
+            background: linear-gradient(135deg, #ff4f9a, #ff7eb3, #ffd6b0);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* PASSWORD SCREEN */
+
+        #password-screen {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .lock {
+            font-size: 80px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 2.5rem;
+        }
+
+        .password-box {
+            margin-top: 30px;
+            display: flex;
+            gap: 10px;
+        }
+
+        input {
+            padding: 14px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            outline: none;
+        }
+
+        button {
+            padding: 14px 22px;
+            border: none;
+            border-radius: 12px;
+            background: white;
+            color: #ff4f9a;
+            font-weight: bold;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* MAIN CONTENT */
+
+        #main {
+            display: none;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .hero {
+            padding: 50px 20px;
+        }
+
+        .hero h2 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            animation: glow 2s infinite;
+        }
+
+        @keyframes glow {
+            50% {
+                text-shadow: 0 0 25px white;
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .18);
+            backdrop-filter: blur(12px);
+            border-radius: 25px;
+            padding: 30px;
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: .4s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        /* GIFTS */
+
+        .gifts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+
+        .gift {
+            width: 140px;
+            height: 140px;
+            background: white;
+            color: #ff4f9a;
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 60px;
+            cursor: pointer;
+            transition: .4s;
+        }
+
+        .gift:hover {
+            transform: scale(1.1);
+        }
+
+        .message {
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* CAKE */
+
+        .cake {
+            font-size: 120px;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        /* HEARTS */
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            font-size: 20px;
+            animation: float 8s linear forwards;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            to {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+
+        /* FINAL MESSAGE */
+
+        .final {
+            font-size: 1.4rem;
+            line-height: 2;
+        }
+
+        footer {
+            padding: 50px;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- PASSWORD SCREEN -->
+
+    <div id="password-screen">
+        <div class="lock">💖</div>
+        <h1>Birthday Surprise</h1>
+        <p>Enter the magic password to unlock your birthday gift 💕</p>
+
+        <div class="password-box">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="checkPassword()">Unlock</button>
+        </div>
+    </div>
+
+    <!-- MAIN PAGE -->
+
+    <div id="main">
+
+        <audio id="song" loop>
+            <source
+                src="file:///home/alphine/Downloads/Khalid,%20Kane%20Brown%20-%20Saturday%20Nights%20REMIX%20(Official%20Video).mp3"
+                type="audio/mpeg">
+        </audio>
+
+        <section class="hero">
+            <h2>Happy Birthday Princess 💖</h2>
+            <p>Today is all about celebrating you ✨</p>
+        </section>
+
+        <div class="card">
+            <h2>💌 A Special Letter</h2>
+
+            <p style="margin-top:20px;line-height:2;">
+                Happy Birthday to one of the most beautiful girl.<br><br>
+
+                I hope your day is filled with happiness,
+                laughter, love, and unforgettable memories.<br><br>
+
+                Thank you for being such an amazing person
+                and for bringing so much joy into my life.<br><br>
+
+                You deserve all the happiness in the world today and always. 💕
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>📸 The view in our eyes</h2>
+
+            <div class="gallery">
+                <img src="file:///home/alphine/Pictures/WhatsApp%20Unknown%202026-06-05%20at%2004.14.22/WhatsApp%20Image%202026-06-05%20at%2003.49.50%20(1).jpeg">
+                <img src="file:///home/alphine/Pictures/WhatsApp%20Image%202026-06-05%20at%2003.49.50.jpeg">
+                <img src="file:///home/alphine/Videos/WhatsApp%20Image%202026-06-05%20at%2003.49.51.jpeg">
+                <img
+                    src="file:///home/alphine/Pictures/WhatsApp%20Unknown%202026-06-05%20at%2004.14.22/WhatsApp%20Image%202026-06-05%20at%2003.49.51%20(2).jpeg">
+                <img
+                    src="file:///home/alphine/Pictures/WhatsApp%20Unknown%202026-06-05%20at%2004.14.22/WhatsApp%20Image%202026-06-05%20at%2003.49.51.jpeg">
+                <img
+                    src="file:///home/alphine/Pictures/WhatsApp%20Unknown%202026-06-05%20at%2004.14.22/WhatsApp%20Image%202026-06-05%20at%2003.49.50.jpeg">
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🎁 Open Your Gifts</h2>
+
+            <div class="gifts">
+
+                <div class="gift" onclick="gift(this,'You make every day brighter for people arround you💖')">
+                    🎁
+                </div>
+
+                <div class="gift" onclick="gift(this,'Your smile is everyones  favorite thing ✨')">
+                    🎁
+                </div>
+
+                <div class="gift" onclick="gift(this,'You deserve all the happiness in the world on your birthday 🌸')">
+                    🎁
+                </div>
+
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>🎂 Birthday Cake</h2>
+
+            <div class="cake">🎂</div>
+
+            <button onclick="celebrate()">
+                🕯️ Blow Out The Candles
+            </button>
+
+            <p id="wish" class="message"></p>
+        </div>
+
+        <div class="card final">
+            <h2>🌹 Final Surprise</h2>
+
+            <p>
+                You are truly special.<br><br>
+
+                Thank you for every beautiful moment.<br><br>
+
+                May this birthday bring you endless joy,
+                success, love, and wonderful memories.<br><br>
+
+                Happy Birthday Princess 💖
+            </p>
+        </div>
+
+        <footer>
+            Forever Apriciated ❤️
+        </footer>
+
+    </div>
+
+    <script>
+
+        const PASSWORD = "princess2026";
+
+        function checkPassword() {
+
+            const pass = document.getElementById("password").value;
+
+            if (pass === PASSWORD) {
+
+                document.getElementById("password-screen").style.display = "none";
+                document.getElementById("main").style.display = "block";
+
+                document.getElementById("song").play();
+
+                for (let i = 0; i < 50; i++) {
+                    setTimeout(createHeart, i * 100);
+                }
+
+            } else {
+                alert("Wrong password 💔");
+            }
+        }
+
+        function createHeart() {
+
+            const heart = document.createElement("div");
+
+            heart.classList.add("heart");
+            heart.innerHTML = ["💖", "💕", "💗", "🌸"][Math.floor(Math.random() * 4)];
+
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (20 + Math.random() * 30) + "px";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
+
+        setInterval(createHeart, 800);
+
+        function gift(el, msg) {
+
+            el.innerHTML = "💌";
+            el.style.fontSize = "18px";
+            el.style.padding = "10px";
+            el.innerHTML = msg;
+        }
+
+        function celebrate() {
+
+            document.getElementById("wish").innerHTML =
+                "✨ Make a wish... May all your dreams come true! ✨";
+
+            for (let i = 0; i < 100; i++) {
+                setTimeout(createHeart, i * 50);
+            }
+        }
+    </script>
+
+</body>
+
+</html>
